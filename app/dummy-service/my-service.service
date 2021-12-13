@@ -1,0 +1,13 @@
+[Unit]
+Description=MyService
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/app/app/dummy-service
+ExecStart=foreman start
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+WantedBy=reboot.target
